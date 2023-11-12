@@ -15,8 +15,11 @@ app.get('/login', (req,res)=> {
   res.send('<h1>Please Enter your Credentials <h1/>')
 })
 
-app.get('/netflix', (req,res)=> {
-  res.send('<h2>NetFlix<h2/>')
+app.get('/testlink', (req,res)=> {
+  res.links({
+    next: 'http://api.example.com/users?page=2',
+    last: 'http://api.example.com/users?page=5'
+  })
 })
 
 app.listen(process.env.PORT, () => {
