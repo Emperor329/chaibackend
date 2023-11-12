@@ -3,7 +3,9 @@ const express = require('express')
 // import { Express } from 'express'
 const app = express()
 const port = 3000
-
+const jsonData= [{
+  user : "narendra"
+}]
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
@@ -16,10 +18,7 @@ app.get('/login', (req,res)=> {
 })
 
 app.get('/testlink', (req,res)=> {
-  res.links({
-    next: 'http://api.example.com/users?page=2',
-    last: 'http://api.example.com/users?page=5'
-  })
+  res.json(jsonData)
 })
 
 app.listen(process.env.PORT, () => {
