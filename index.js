@@ -17,7 +17,7 @@ app.get('/login', (req,res)=> {
   res.send('<h1>Please Enter your Credentials <h1/>')
 })
 
-app.get('/testlink', (req,res)=> {
+app.get('/user', (req,res)=> {
   res.json(jsonData)
 })
 
